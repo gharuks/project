@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(169, 154, 210);
+    box-sizing: border-box;
+    width: 100%;
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+    /* display: none; */
+    /* text-decoration: none; */
+}
+
+/* *{
+    width: auto;
+} */

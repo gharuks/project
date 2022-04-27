@@ -1,0 +1,51 @@
+<div *ngIf="recipe">
+  <p class="ingredientname">
+    {{recipe.name}} <br>
+    {{recipe.description}} <br>
+    {{recipe.tag}} <br>
+  </p>
+  <p>
+    <img src="{{recipe.image}}" class="recipeimg"><br>
+  </p>
+</div>
+
+<div *ngIf="ingredient">
+  <div class="allneededingredients">
+    <h1>All needed ingredients</h1>
+    <ul class="allneeded">
+      <li> {{ingredient.amount1}} {{ingredient.ing1}}
+      <li> {{ingredient.amount2}} {{ingredient.ing2}}
+      <li> {{ingredient.amount3}} {{ingredient.ing3}}
+      <li> {{ingredient.amount4}} {{ingredient.ing4}}
+      <li *ngIf="ingredient.ing5!=''"> {{ingredient.amount5}} {{ingredient.ing5}}
+      <li *ngIf="ingredient.ing6!=''"> {{ingredient.amount6}} {{ingredient.ing6}}
+      <li *ngIf="ingredient.ing7!=''"> {{ingredient.amount7}} {{ingredient.ing7}}
+      <li *ngIf="ingredient.ing8!=''"> {{ingredient.amount8}} {{ingredient.ing8}}
+      <li *ngIf="ingredient.ing9!=''"> {{ingredient.amount9}} {{ingredient.ing9}}   
+      <li *ngIf="ingredient.ing10!=''"> {{ingredient.amount10}} {{ingredient.ing10}}
+      <li *ngIf="ingredient.ing11!=''"> {{ingredient.amount11}} {{ingredient.ing11}}
+      <li *ngIf="ingredient.ing12!''"> {{ingredient.amount12}} {{ingredient.ing12}} 
+      <li *ngIf="ingredient.ing13!=''"> {{ingredient.amount13}} {{ingredient.ing13}}
+      <li *ngIf="ingredient.ing14!=''"> {{ingredient.amount14}} {{ingredient.ing14}}
+      <li *ngIf="ingredient.ing15!=''"> {{ingredient.amount15}} {{ingredient.ing15}}
+	
+    </ul>
+  </div>
+
+  <h1>Steps:</h1>
+  <p> {{ingredient.step1}}</p>
+  <p> {{ingredient.step2}}</p>
+  <p> {{ingredient.step3}}</p>
+  <p *ngIf="ingredient.step4!=''"> {{ingredient.step4}}</p>
+  <p *ngIf="ingredient.step5!=''"> {{ingredient.step5}}</p>
+  <p *ngIf="ingredient.step6!=''"> {{ingredient.step6}}</p>
+  <p *ngIf="ingredient.step7!=''"> {{ingredient.step7}}</p>
+  <p *ngIf="ingredient.step8!=''"> {{ingredient.step8}}</p>
+  <p *ngIf="ingredient.step9!=''"> {{ingredient.step9}}</p>
+  <p *ngIf="ingredient.step10!=''"> {{ingredient.step10}}</p>
+</div>
+
+<button (click)="goBack()"class="btn">Back</button>
+<!-- <div class="btn" [routerLink]="['/recipes']">
+  Back
+</div> -->

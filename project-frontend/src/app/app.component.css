@@ -1,0 +1,38 @@
+.menu {
+  color: white;
+  text-decoration: none;
+  font-size: 70px;
+  margin-left: 3%;
+  background: black;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#home-img {
+  height: 50px;
+  width: 50px;
+  margin-top: 7px;
+}
+
+#fork-img{
+  height: 50px;
+  width: 50px;
+  margin-top: 9px;
+}
+
+#paper-img{
+  height: 50px;
+  width: 50px;
+  margin-top: 9px;
+}
+
+#login-img{
+  height: 50px;
+  width: 50px;
+  margin-top: 9px;
+}
+
+#header{
+  text-align: center;
+}
+

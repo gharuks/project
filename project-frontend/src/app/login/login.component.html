@@ -1,0 +1,64 @@
+<div class="first" *ngIf="!logged">
+  <div class="form">
+    <div class="input">
+      <input type="text" placeholder="Phone number, username, or email" class="in" [(ngModel)]="username">
+    </div>
+    <div class="input">
+      <input type="password" placeholder="Password" class="in" [(ngModel)]="password">
+    </div>
+    <button  (click)="login()">Login</button>
+  </div>
+  <div class="or">
+    <div class="forgot">
+      <a href="#">Forgot password?</a>
+    </div>
+  </div>
+</div>
+<div class="signup" *ngIf="!logged">
+  <p>Don't have an account? <a [routerLink] = "['/register']">Sign up</a></p>
+</div>
+
+
+<!-- 
+<div *ngIf="!logged">
+  <h1>Login form</h1>
+  <p>Username: <input type="text" [(ngModel)]="username"></p>
+  <p>Password: <input type="text" [(ngModel)]="password"></p>
+  <button (click)="login()">Login</button>
+</div>  -->
+
+<div *ngIf="logged">
+  <!-- <router-outlet></router-outlet> -->
+  <br>
+  <h1>You logged {{name}}</h1>
+  <fieldset id="add-block">
+  <input type="text" [(ngModel)]="newname">
+  <input type="text" [(ngModel)]="newdescription">
+  <input type="text" [(ngModel)]="newtag">
+  <input type="text" [(ngModel)]="newimage">
+  <input type="text" [(ngModel)]="newlike">
+  <input type="text" [(ngModel)]="newdislike">
+  <button id="add-button" (click)="addProduct()">Add Product</button>
+  </fieldset>
+  
+  <ul>
+    <div *ngFor="let recipe of recipes" class="foodrecipes">
+      <a [routerLink]="['/recipes', recipe.id]" class="linkrecipes">
+        <img class="imgfood" [routerLink]="['/recipes', recipe.id]" src="{{recipe.image}}">
+        <div class="information">
+          <h2 class="info">Name: </h2>{{recipe.name}}<br>
+          <h2 class="info">Description: </h2>{{recipe.description}}<br>
+          <h2 class="info">Kitchen: </h2>{{recipe.tag}}
+        </div>
+      </a>
+      <button (click)="deleteProduct(recipe) ">remove</button>
+    </div>
+  </ul>
+  <!-- <div *ngIf="loading" id="product-block">
+  </div>
+  
+  <p *ngIf="!loading">Loading list of products...</p> -->
+
+  <!-- {{user.username}} -->
+  <button (click)="logout()" class="logout">Logout</button>
+</div>

@@ -1,0 +1,15 @@
+<img src="https://pngimg.com/uploads/chef/chef_PNG184.png" id="kitchen">
+
+<h1 class="main-txt">COOKING BOOK</h1>
+
+<p> And this is not just a huge array of culinary recipes, but favorite dishes of our users tested in home kitchens,
+  as well as original recipes that our editors come up with or adapt. The in-house chefs then prepare these dishes in
+  editorial kitchens. What we don't like is being redone, so almost all the recipes that you find on the site will
+  work for you.
+</p>
+
+
+<div *ngFor="let category of categories" >
+  DONE!!!
+  <a [routerLink]="['/home']">{{category.name}}</a>
+</div>

@@ -1,0 +1,40 @@
+.register-container{
+    color: cornsilk;
+    text-align: center;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: cornsilk solid 2px; 
+    padding:5%;
+    background-color: #af0abe;
+    margin-left: 32%;
+    margin-right: 32%;
+    border-radius: 20px;
+    /* margin: auto; */
+}
+
+.form-group{
+    display: inline-block;
+    margin: 2%;
+}
+
+.btn-primary{
+    text-decoration: none;
+    color: cornsilk;
+    background-color: black;
+    padding:10px;
+    border-radius: 2px;
+    margin-right: 2%;
+}
+
+.btn-link{
+    text-decoration: none;
+    color: cornsilk;
+    padding: 10px;
+    border-radius: 2px;
+    margin-right: 2%;
+    font-size: 14px;
+}

@@ -1,0 +1,14 @@
+div{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 150px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+p{
+    text-align: center;
+    margin-top: 5%;
+    font-size: 40px;
+    /* border-style: ridge; */
+    font-family: 'Brush Script MT', cursive;
+}

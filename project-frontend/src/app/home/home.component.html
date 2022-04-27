@@ -1,0 +1,31 @@
+<h2 id="main">RECIPES {{name}} </h2>
+
+<div *ngFor="let recipe of recipes" class="foodrecipes">
+  <a [routerLink]="['/recipes', recipe.id]" class="linkrecipes">
+    <img class="imgfood" [routerLink]="['/recipes', recipe.id]" src="{{recipe.image}}">
+    <div class="information">
+      <h2 class="info">Name: </h2>{{recipe.name}}<br>
+      <h2 class="info">Description: </h2>{{recipe.description}}<br>
+      <h2 class="info">Kitchen: </h2>{{recipe.tag}}
+    </div>
+  </a>
+
+  <div class="informationforevents">
+    <button class="btn" (click)="likeItem(recipe)">
+      Like ❤️{{ recipe.like }}
+    </button>
+
+    <button class="btn" (click)="DislikeItem(recipe)">
+      Dislike 💔{{ recipe.dislike }}
+    </button>
+
+    <button class="btn" (click)="share(recipe.image, recipe.description)">
+      Share 📬
+    </button>
+
+    <!-- <button class="btn" (click)="removeItem(recipe.id)">
+      Remove ♻️
+    </button> -->
+  </div>
+  <hr size="10px" width="auto" color="black" class="line">
+</div>

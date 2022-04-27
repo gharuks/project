@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+
+</head>
+
+<body>
+  <div class='registration'>
+    <form #userForm="ngForm" (ngSubmit)="onFormSubmit(userForm)">
+      <div>
+        Name: <input name="name" ngModel required #userName="ngModel">
+      </div>
+      <div>
+        City: <input name="city" ngModel #userCity="ngModel">
+      </div>
+      <div>
+        BirthDate: <input name="birthdate" ngModel type="date">
+      </div>
+      <div>
+        Email: <input name="email" ngModel #userEmail="ngModel" type="email">
+      </div>
+      <div>
+        <button class="btn">Submit</button>
+        <button class="btn" type="button" (click)="resetUserForm(userForm)">Reset</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
